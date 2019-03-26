@@ -11,7 +11,7 @@ public class DroidCloneFactory {
         this.droid = droid;
     }
 
-    Droid cloneDroid(){
+    Droid cloneDroid() {
         return (Droid) droid.copy();
     }
 }

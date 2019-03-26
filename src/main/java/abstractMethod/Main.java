@@ -7,13 +7,13 @@ public class Main {
         droid.sayHello();
     }
 
-    public static DroidFactory createDroidBySpeciality(String speciality){
+    public static DroidFactory createDroidBySpeciality(String speciality) {
         if (speciality.equalsIgnoreCase("BattleDroid")) {
             return new BattleDroidFactory();
-        }else {
+        } else {
             if (speciality.equalsIgnoreCase("TransportDroid")) {
                 return new TransportDroidFactory();
-            }else {
+            } else {
                 throw new RuntimeException(String.format("%d is not exists", speciality));
             }
         }

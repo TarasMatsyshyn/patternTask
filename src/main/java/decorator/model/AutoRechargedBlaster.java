@@ -5,7 +5,7 @@ public class AutoRechargedBlaster extends BlasterDecorator {
         super(blaster);
     }
 
-    public String autoRechargering(){
+    public String autoRechargering() {
         return " Blaster rechargered now -";
     }
 

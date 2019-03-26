@@ -13,6 +13,6 @@ public class AdapterOldShipToModern extends OldDroidShip implements ModernDroidS
     }
 
     public Droid getDroid(int index) {
-        return droids.get(index) ;
+        return droids.get(index);
     }
 }

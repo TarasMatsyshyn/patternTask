@@ -5,7 +5,7 @@ public class GrenadeAutoRechargeredBlaster extends BlasterDecorator {
         super(blaster);
     }
 
-    public String shootingWithGrenade(){
+    public String shootingWithGrenade() {
         return " Blaster shooting with grenade";
     }
 
