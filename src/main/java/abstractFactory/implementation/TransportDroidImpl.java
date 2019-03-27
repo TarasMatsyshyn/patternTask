@@ -1,9 +1,11 @@
 package abstractFactory.implementation;
 
-import abstractFactory.TransportDroid;
+import static abstractFactory.Utils.logInfo;
 
-public class TransportDroidImpl implements TransportDroid {
-    public String transporting() {
-        return "Transport droid bring new equipment!";
+import abstractFactory.interfaces.Droid;
+
+public class TransportDroidImpl implements Droid {
+    public void transport() {
+        logInfo("Transport droid bring new equipment!");
     }
 }

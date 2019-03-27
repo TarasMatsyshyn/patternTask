@@ -4,9 +4,8 @@ import static abstractFactory.Utils.logInfo;
 
 import abstractFactory.interfaces.Droid;
 
-public class BattleDroidImpl implements Droid {
-
-    public void fight() {
-        logInfo("Battle droid is fighting now!");
+public class CommanderDroidImpl implements Droid {
+    public void command() {
+        logInfo("Command droid control situation!");
     }
 }

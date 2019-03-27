@@ -1,9 +1,11 @@
 package abstractFactory.implementation;
 
-import abstractFactory.RepairDroid;
+import static abstractFactory.Utils.logInfo;
 
-public class RepairDroidImpl implements RepairDroid {
-    public String repair() {
-        return "Repair droid repaired fight droid!";
+import abstractFactory.interfaces.Droid;
+
+public class RepairDroidImpl implements Droid {
+    public void repair() {
+        logInfo("Repair droid repaired fight droid!");
     }
 }
