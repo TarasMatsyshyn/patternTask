@@ -1,7 +1,7 @@
 package abstractMethod;
 
 public class BattleDroid implements Droid {
-    public void sayHello() {
-        System.out.println("Hello, I`m battle droid");
+    public void work() {
+        System.out.println("Droid fighting now!");
     }
 }
