@@ -1,4 +1,4 @@
-package abstractMethod;
+package factoryMethod;
 
 public class BattleDroidFactory implements DroidFactory {
     public Droid createDroid() {

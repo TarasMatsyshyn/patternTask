@@ -1,10 +1,10 @@
-package abstractMethod;
+package factoryMethod;
 
 public class Main {
     public static void main(String[] args) {
-        DroidFactory droidFactory = createDroidBySpeciality("traNsporTdroid");
+        DroidFactory droidFactory = createDroidBySpeciality("BattleDroid");
         Droid droid = droidFactory.createDroid();
-        droid.sayHello();
+        droid.work();
     }
 
     public static DroidFactory createDroidBySpeciality(String speciality) {
@@ -14,7 +14,7 @@ public class Main {
             if (speciality.equalsIgnoreCase("TransportDroid")) {
                 return new TransportDroidFactory();
             } else {
-                throw new RuntimeException(String.format("%d is not exists", speciality));
+                throw new RuntimeException(String.format("%d does not exists", speciality));
             }
         }
     }
