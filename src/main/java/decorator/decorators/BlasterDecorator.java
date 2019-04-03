@@ -1,4 +1,6 @@
-package decorator.model;
+package decorator.decorators;
+
+import decorator.Blaster;
 
 public class BlasterDecorator implements Blaster {
     protected Blaster blaster;
@@ -7,7 +9,7 @@ public class BlasterDecorator implements Blaster {
         this.blaster = blaster;
     }
 
-    public String shoot() {
-        return blaster.shoot();
+    public void shoot() {
+        blaster.shoot();
     }
 }
