@@ -1,13 +1,27 @@
 package adapter;
 
-import org.apache.log4j.Logger;
+import static adapter.JsonToXmlAdapter.adaptJsonStringToXml;
+import static adapter.Utils.translateFileToString;
+
+import java.io.IOException;
 
 public class Main {
-    private static final Logger LOGGER = Logger.getLogger(decorator.Main.class.getName());
+    private static final String jsonTransportDroidPath = "/transportDroid.json";
+    private static final String xmlBattleDroidPath = "/battleDroid.xml";
 
-    public static void main(String[] args) {
-        ModernDroidShip ship = new AdapterOldShipToModern(null);
-        ship.addDroid(new Droid("B2", 340, 2015));
-        LOGGER.info(ship.getDroid(0));
+    public static void main(String[] args) throws IOException {
+
+        /**
+         * Method getDroidInfo() works only with 'xml' files
+         * In project implemented adapter witch adapt 'json' file to xml format
+         */
+
+        DroidScanner droidScanner = new DroidScanner();
+
+        String battleDroidInfo = droidScanner.getDroidInfo(translateFileToString(xmlBattleDroidPath)).toString();
+        System.out.println(battleDroidInfo);
+
+        String transportDroidInfo = droidScanner.getDroidInfo(adaptJsonStringToXml(translateFileToString(jsonTransportDroidPath))).toString();
+        System.out.println(transportDroidInfo);
     }
 }

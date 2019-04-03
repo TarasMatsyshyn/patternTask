@@ -22,7 +22,7 @@ public class Droid implements Copyable {
 
     @Override
     public String toString() {
-        return "Droid{" +
+        return "DroidModel{" +
                 "name='" + name + '\'' +
                 ", health=" + health +
                 ", armor=" + armor +
