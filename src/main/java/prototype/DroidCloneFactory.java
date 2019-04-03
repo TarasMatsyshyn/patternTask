@@ -1,7 +1,7 @@
 package prototype;
 
 public class DroidCloneFactory {
-    Droid droid;
+    public Droid droid;
 
     public DroidCloneFactory(Droid droid) {
         this.droid = droid;
@@ -11,7 +11,7 @@ public class DroidCloneFactory {
         this.droid = droid;
     }
 
-    Droid cloneDroid() {
+    public Droid cloneDroid() {
         return (Droid) droid.copy();
     }
 }
